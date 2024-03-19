@@ -15,6 +15,9 @@ ball = {
 }
 
 //Draw Ball on Canvas
+function drawBall() {
+    ctx.beginPath()
+}
 
 
 // Rules open and close event handlers
