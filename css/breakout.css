@@ -1,0 +1,58 @@
+import url('https://fonts.googleapis.com/css2?family=Angkor&family=Anton&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Notable&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0095dd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+canvas {
+    background: #f0f0f0;
+    display: block;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 45px;
+    color: white;
+    font-family: "Notable", sans-serif;
+}
+
+.btn {
+    cursor: pointer;
+    border: 0;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #222222;
+}
+
+.btn:active {
+    transfrom: scale(0.98);
+}
+
+.rules-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.rules {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #333333;
+    color: #ffffff;
+}
