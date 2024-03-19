@@ -7,12 +7,24 @@ ctx = canvas.getContext('2d')
 // Creare Ball Properties
 ball = {
     x: canvas.width / 2,
-    y: canvas.height /2,
+    y: canvas.height / 2,
     size: 10,
     speed: 4,
     dx: 4,
     dy: -4,
 }
+//Create Paddle properties
+paddle = {
+    x: canvas.width / 2,
+    y: canvas.height - 20,
+    w: 80,
+    h: 10,
+    speed: 8,
+    dx: 0,
+}
+
+
+
 
 //Draw Ball on Canvas
 function drawBall() {
