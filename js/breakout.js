@@ -1,15 +1,11 @@
-rules = document.querySelectorAll('.panel')
+rulesBtn = document.getElementById('rules-btn")
+rules = document.getElementById('rules')
+closeBtn = document.getElementById('close-btn')
 
-rules.forEach(panel => {
-    rules.addEventListener('click', () => {
-        removeActiveClasses()
-        panel.classList.add('show')
-    })
+// Rules open and close event handlers
+rulesBtn.addEventListener('click', () => {
+    rules.classList.add('show')
 })
-
-
-function removeActiveClasses(){
-    panels.forEach(panel => {
-        rules.classList.remove('show')
-    })
-}
+closeBtn.addEventListener('click', () => {
+    rules.classList.remove('show')
+})
