@@ -1,11 +1,13 @@
-rulesBtn = document.getElementById('rules-btn")
-rules = document.getElementById('rules')
-closeBtn = document.getElementById('close-btn')
+rules = document.getElementById('rules-btn')
+hiderules = document.getElementById('close-btn')
+toggle = document.querySelector('.rules')
+
 
 // Rules open and close event handlers
-rulesBtn.addEventListener('click', () => {
-    rules.classList.add('show')
+rules.addEventListener('click', () => {
+    toggle.classList.add('show')
 })
-closeBtn.addEventListener('click', () => {
-    rules.classList.remove('show')
+
+hiderules.addEventListener('click', () => {
+    toggle.classList.remove('show')
 })
