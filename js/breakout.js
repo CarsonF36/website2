@@ -107,6 +107,7 @@ function draw() {
     drawPaddle()
     drawBall()
     drawScore()
+    drawBricks()
 }
 
 draw()
