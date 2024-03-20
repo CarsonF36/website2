@@ -45,9 +45,19 @@ function drawPadddle() {
     ctx.closePath()
 }
 
+//Draw score on canvas
+function drawScore() {
+
+}
+
+
+//Draw Everything
+function draw() {
 drawPaddle()
 drawBall()
+}
 
+draw()
 
 // Rules open and close event handlers
 rules.addEventListener('click', () => {
