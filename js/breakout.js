@@ -3,6 +3,7 @@ hiderules = document.getElementById('close-btn')
 toggle = document.querySelector('.rules')
 canvas = document.getElementById('canvas')
 ctx = canvas.getContext('2d')
+score = 0
 
 // Creare Ball Properties
 ball = {
@@ -47,7 +48,7 @@ function drawPaddle() {
 
 //Draw score on canvas
 function drawScore() {
-
+    ctx.font = '20px Arial'
     ctx.fillText('Score: ${score}, canvas.width-100, 30')
 }
 
