@@ -40,6 +40,22 @@ function drawBall() {
 }
 
 
+//Create Brick properties
+brickInfo = {
+    w: 70,
+    h: 20,
+    padding: 10,
+    offsetX: 45,
+    offsetY: 60,
+    visible: true
+}
+
+// Create Bricks
+bricks = []
+for (let i = 0; i < brickRowCount; i++) {
+    
+}
+
 // Create paddle properties
 paddle = {
     x: canvas.width / 2 - 40,
@@ -50,15 +66,6 @@ paddle = {
     dx: 0,
 }
 
-//Create Brick properties
-brickInfo = {
-    w: 70,
-    h: 20,
-    padding: 10,
-    offsetX: 45,
-    offsetY: 60,
-    visible: true
-}
 
 
 // Draw paddle on canvas
