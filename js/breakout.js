@@ -35,6 +35,16 @@ function drawBall() {
     ctx.closePath()
 }
 
+
+//Draw Paddle on Canvas
+function drawPadddle() {
+    ctx.beginPath()
+    ctx.
+    ctx.fillStyle = '#009599'
+    ctx.fill()
+    ctx.closePath()
+}
+
 drawBall()
 
 
