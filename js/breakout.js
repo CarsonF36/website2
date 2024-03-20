@@ -92,7 +92,13 @@ function drawScore() {
 //Draw bricks on canvas
 function drawBricks() {
     bricks.forEach(column => {
-        c
+        column.forEach(brick => {
+            ctx.beginPath()
+            ctx.rect(brick.x, brick.y, brick.w, brick.h)
+            ctx.fillStyle = '#0095dd'
+            ctx.fill()
+            ctx.closePath()
+        })
     })
 }
 
