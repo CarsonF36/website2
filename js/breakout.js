@@ -151,6 +151,7 @@ document.addEventListener('keyup', keyUp)
 function moveBall() {
     ball.x = ball.x + ball.dx
     ball.y = ball.y + ball.dy
+}
 
     //wall collision (top)
     if (ball.y + ball.size < 0) {
@@ -171,9 +172,12 @@ function moveBall() {
     if (ball.x + ball.size < 0) {
             ball.dx = -1 * ball.dx
         }
-    }
-}
 
+
+    //paddle collision
+    if (
+        
+    )
 //Update canvas drawing and animation
 function update() {
     moveBall()
