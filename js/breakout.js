@@ -178,6 +178,21 @@ function moveBall() {
 if (
     ball.x - ball.size > paddle.x && ball.x + ball.size < paddle.x + paddle.w && ball.y + ball.size > paddle.y
     )
+
+//Brick Collision
+ bricks.forEach(column => {
+    colum.forEach(brick => {
+        if (brick.visible) {
+            if (
+                ball.y - ball.size < brick.y + brick.h //bottom
+            )
+            ball.dy = -1 * ball.dy
+            brick.visible.false
+        }
+    })
+ })
+
+
 //Update canvas drawing and animation
 function update() {
     moveBall()
