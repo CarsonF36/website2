@@ -104,10 +104,83 @@ function drawBricks() {
 
 // Draw everything
 function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
     drawPaddle()
     drawBall()
     drawScore()
     drawBricks()
 }
 
-draw()
+// Move paddle on canvas
+function movePaddle() {
+    paddle.x = paddle.x + paddle.dx
+
+    // wall detection
+    if (paddle.x < 0) {
+        paddle.x = 0
+    }
+    if (paddle.x + paddle.w > canvas.width) {
+        paddle.x = canvas.width - paddle.w
+    }
+}
+
+// Keydown Event
+function keyDown(e) {
+   // console.log(e.key)
+    if (e.key == 'ArrowRight' || e.key == 'Right') {
+        paddle.dx = paddle.speed
+    }
+    if (e.key == 'ArrowLeft' || e.key == 'Left') {
+        paddle.dx = -paddle.speed
+    }
+}
+
+//Keyup event
+function keyUp(e) {
+    if (e.key == 'ArrowRight' || e.key == 'Right' || e.key == 'ArrowLeft' || e.key == 'Left') {
+        paddle.dx = 0
+    }
+}
+
+// Keyboard event handlers
+document.addEventListener('keydown', keyDown)
+document.addEventListener('keyup', keyUp)
+
+
+//
+function moveBall() {
+    ball.x = ball.x + ball.dx
+    ball.y = ball.y + ball.dy
+
+    //wall collision (top)
+    if (ball.y + ball.size < 0) {
+        ball.dy = -1 * ball.dy
+    }
+
+    //wall collision (right)
+    if (ball.x + ball.size > canvas.width) {
+        ball.dx = -1 * ball.dx
+    }
+
+    //wall collision (bottom)
+    if (ball.y + ball.size > canvas.height) {
+        ball.dy = -1 * ball.dy
+    }
+
+    //wall collision (left) {
+    if (ball.x + ball.size < 0) {
+            ball.dx = -1 * ball.dx
+        }
+    }
+}
+
+//Update canvas drawing and animation
+function update() {
+    moveBall()
+    movePaddle()
+    draw()
+    requestAnimationFrame(update)
+}
+
+
+update()
