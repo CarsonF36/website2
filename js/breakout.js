@@ -176,7 +176,9 @@ function moveBall() {
 
 //paddle collision
 if (
-    ball.x - ball.size > paddle.x && ball.x + ball.size < paddle.x + paddle.w && ball.y + ball.size > paddle.y
+    ball.x - ball.size > paddle.x &&
+    ball.x + ball.size < paddle.x + paddle.w &&
+    ball.y + ball.size > paddle.y
     )
 
 //Brick Collision
