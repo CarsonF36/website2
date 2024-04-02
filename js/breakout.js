@@ -187,7 +187,7 @@ if (
 
 //Brick Collision
  bricks.forEach(column => {
-    colum.forEach(brick => {
+    column.forEach(brick => {
         if (brick.visible) {
             if (
                 ball.x - ball.size > brick.x && //left brick side
