@@ -151,7 +151,7 @@ document.addEventListener('keyup', keyUp)
 function moveBall() {
     ball.x = ball.x + ball.dx
     ball.y = ball.y + ball.dy
-}
+
 
     //wall collision (top)
     if (ball.y + ball.size < 0) {
@@ -166,6 +166,8 @@ function moveBall() {
     //wall collision (bottom)
     if (ball.y + ball.size > canvas.height) {
         ball.dy = -1 * ball.dy
+        showAllBricks()
+        score = 0
     }
 
     //wall collision (left) {
@@ -199,7 +201,7 @@ if (
         }
     })
  })
-
+}
 //increase score
 function increaseScore() {
     score++ //score = score + 1
