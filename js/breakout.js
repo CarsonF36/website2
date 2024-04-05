@@ -168,12 +168,10 @@ function update() {
     moveBall()
     movePaddle()
     draw()
-    if(ball.y + ball.size < canvas.height){
     requestAnimationFrame(update)
 }
-}
 
-document.getElementById("start").addEventListener("click", update());
+document.getElementById("start").addEventListener("click",));
 
 function keyDown(e) {
     if (e.key == 'ArrowRight' || e.key == 'Right' || e.key == 'd') {
