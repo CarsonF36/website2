@@ -168,7 +168,9 @@ function update() {
     moveBall()
     movePaddle()
     draw()
+    if(ball.y + ball.size < canvas.height){
     requestAnimationFrame(update)
+}
 }
 
 update()
