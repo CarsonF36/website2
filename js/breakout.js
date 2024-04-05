@@ -173,7 +173,7 @@ function update() {
 }
 }
 
-update()
+document.getElementById("start").addEventListener("click", update());
 
 function keyDown(e) {
     if (e.key == 'ArrowRight' || e.key == 'Right' || e.key == 'd') {
