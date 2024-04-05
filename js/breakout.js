@@ -3,7 +3,11 @@ close = document.getElementById('close-btn')
 rules = document.getElementById('rules')
 canvas = document.getElementById('canvas')
 ctx = canvas.getContext('2d')
+run = document.getElementById('start')
 
+run.addEventListener('click', () => {
+    update()
+})
 score = 0
 BrickRowCount = 9
 BrickColumnCount = 5
@@ -168,10 +172,11 @@ function update() {
     moveBall()
     movePaddle()
     draw()
+    if(ball.y + ball.size < canvas.height) {
     requestAnimationFrame(update)
+    }
 }
 
-document.getElementById("start").addEventListener("click",));
 
 function keyDown(e) {
     if (e.key == 'ArrowRight' || e.key == 'Right' || e.key == 'd') {
