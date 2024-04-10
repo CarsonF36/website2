@@ -6,6 +6,9 @@ const timeEl = document.getElementById('time')
 const scoreEl = document.getElementById('score')
 const message = document.getElementById('message')
 const won = document.getElementById('winning')
+const win = document.getElementById('W')
+const loss = document.getElementById('L')
+
 let seconds = 0
 let score = 0
 let selected_insect = {}
@@ -77,8 +80,8 @@ function increaseScore() {
     scoreEl.innerHTML = `Score: ${score}`
 }
 
-if (score > 59 && seconds < 30) {
-    message2.classList.add('visible')
+//if (score > 59 && seconds < 30) {
+//    message2.classList.add('visible')
 }
 
 function getRandomLocation() {
