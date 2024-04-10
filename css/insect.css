@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
@@ -26,7 +27,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: margin
+    transition: margin 0.5s ease-in;
 }
 
 .btn {
@@ -46,6 +47,7 @@ body{
 
 
 .screen.up {
+
     margin-top: -100vh;
 }
 
@@ -117,13 +119,14 @@ h1 {
     top: 0;
     left: 50%;
     transform: translate(-50%, -150%);
+    opacity:0;
 }
 
 
 
 
 .message.visible {
-    opacity: 1;
+    opacity:1;
     transform: translate(-50%, 150%)
 }
 
