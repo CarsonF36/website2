@@ -150,15 +150,12 @@ h1 {
 }
 
 .message2 {
-    line-height: 1.7;
-    width: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 100;
-    padding: 20px;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -150%);
-    opacity: 1;
+    font-size: 30px;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.message2.visible {
+    transition: transform 0.3s ease-in-out;
+    opacity: 1
 }
