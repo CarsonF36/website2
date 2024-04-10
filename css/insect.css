@@ -157,5 +157,5 @@ h1 {
 
 .message2.visible {
     transition: transform 0.3s ease-in-out;
-    opacity: 1
+    opacity: 1;
 }
