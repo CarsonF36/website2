@@ -77,7 +77,7 @@ function increaseScore() {
     scoreEl.innerHTML = `Score: ${score}`
 }
 
-if (score < 60 || seconds < 30) {
+if (score > 60 || seconds < 30) {
     message2.classList.add('visible')
 }
 
