@@ -46,7 +46,6 @@ body{
 
 
 .screen.up {
-
     margin-top: -100vh;
 }
 
@@ -148,4 +147,18 @@ h1 {
 .insect img {
     width: 100px;
     height: 100px;
+}
+
+.message2 {
+    line-height: 1.7;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    opacity: 1;
 }
