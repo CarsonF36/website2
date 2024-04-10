@@ -144,3 +144,8 @@ h1 {
     opacity: 0;
     transition: transform 0.3s ease-in-out;
 }
+
+.insect img {
+    width: 100px;
+    height: 100px;
+}
