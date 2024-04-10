@@ -77,6 +77,8 @@ function increaseScore() {
     scoreEl.innerHTML = `Score: ${score}`
 }
 
+if (score < 60)
+
 function getRandomLocation() {
     const width = window.innerWidth
     const height = window.innerHeight
