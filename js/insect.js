@@ -9,7 +9,7 @@ let seconds = 0
 let score = 0
 let selected_insect = {}
 const win = document.getElementById('Win')
-const loss = document.getElementById('Lpss')
+const loss = document.getElementById('Loss')
 
 start_btn.addEventListener('click',() => {
     screens[0].classList.add('up')
