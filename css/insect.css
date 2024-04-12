@@ -150,7 +150,7 @@ h1 {
     cursor: pointer;
 }
 
-#message2 {
+.message2 {
     font-size: 50px;
     opacity: 0;
     transition: transform 0.3s ease-in-out;
@@ -160,7 +160,7 @@ h1 {
     position: absolute;
 }
 
-#message2.visible {
+.message2.visible {
     z-index: 100;
     opacity: 1;
     transition: transform 0.3s ease-in-out;
@@ -168,7 +168,7 @@ h1 {
     cursor: pointer;
 }
 
-#message3 {
+.message3 {
     font-size: 50px;
     opacity: 0;
     transition: transform 0.3s ease-in-out;
@@ -178,7 +178,7 @@ h1 {
     position: absolute;
 }
 
-#message3.visible {
+.message3.visible {
     z-index: 100;
     opacity: 1;
     transition: transform 0.3s ease-in-out;
