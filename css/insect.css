@@ -170,21 +170,21 @@ h1 {
 }
 
 
-#Win {
+.Win {
     opacity: 0;
 }
 
 
-#Loss {
+.Loss {
     opacity: 0;
 }
 
 
-#Win.visible {
+.Win.visible {
     opacity: 1;
 }
 
 
-#Loss.visible {
+.Loss.visible {
     opacity: 1;
 }
