@@ -80,9 +80,7 @@ function WL(){
     if (seconds > 30 && score < 60)
     {
         Loss.classList.add('visible')
-        if(message.classList('visible')) {
         message.classList.remove('visible')
-        }
     }
 }
 function increaseScore() {
