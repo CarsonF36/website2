@@ -170,18 +170,20 @@ h1 {
 }
 
 
-
 #Win {
     opacity: 0;
 }
+
 
 #Loss {
     opacity: 0;
 }
 
+
 #Win.visible {
     opacity: 1;
 }
+
 
 #Loss.visible {
     opacity: 1;
