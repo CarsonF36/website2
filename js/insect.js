@@ -5,12 +5,11 @@ const start_btn = document.getElementById('start-btn')
 const timeEl = document.getElementById('time')
 const scoreEl = document.getElementById('score')
 const message = document.getElementById('message')
-const Winmessage = document.getElementById('win')
-const LoseMessage = document.getElementById('loss')
-const won = document.getElementById('winning')
 let seconds = 0
 let score = 0
 let selected_insect = {}
+const win = document.getElementById('W')
+const loss = document.getElementById('L')
 
 start_btn.addEventListener('click',() => {
     screens[0].classList.add('up')
@@ -27,7 +26,6 @@ choose_insect_btns.forEach(btn => {
         startGame()
     })
 })
-
 
 function createInsect() {
     const insect = document.createElement('div')
@@ -71,26 +69,25 @@ function increaseTime() {
     seconds++
 
 }
-function WL(){
-if(score > 60){
-    message.classList.remove('visible')
-    Win.classList.add('visible')
-}
-if(score < 60){
-    message.classList.remove('visible')
-    Loss.classList.add('visible')
-}
-}
+
 function increaseScore() {
     score++
     if (score > 19) {
         message.classList.add('visible')
     }
     scoreEl.innerHTML = `Score: ${score}`
-    if(seconds == 30 || score == 60){
-        WL()
+
+    if (score > 59 && seconds < 31)
+    {
+        W.classList.add('visible')
+        message.classList.remove('visible')
     }
 
+    if (seconds > 30 && score < 60)
+    {
+        L.classList.add('visible')
+        message.classList.remove('visible')
+    }
 }
 
 function getRandomLocation() {
