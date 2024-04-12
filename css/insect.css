@@ -136,6 +136,7 @@ h1 {
     position: absolute;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 0.3s ease-in-out;
+    z-index: 0;
 }
 
 .insect.caught {
@@ -145,6 +146,7 @@ h1 {
 }
 
 .insect img {
+    z-index: 0;
     width: 100px;
     height: 100px;
     cursor: pointer;
@@ -154,7 +156,7 @@ h1 {
     line-height: 1.7;
     width: 100%;
     background-color: rgba(0,0,0,0.5);
-    z-index: 100;
+    z-index: 1000000;
     padding: 20px;
     text-align: center;
     position: absolute;
@@ -173,7 +175,7 @@ h1 {
     line-height: 1.7;
     width: 100%;
     background-color: rgba(0,0,0,0.5);
-    z-index: 100;
+    z-index: 100000;
     padding: 20px;
     text-align: center;
     position: absolute;
