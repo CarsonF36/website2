@@ -1,16 +1,4 @@
-const screens = document.querySelectorAll('.screen')
-const choose_insect_btns = document.querySelectorAll('.choose-insect-btn')
-const game_container = document.getElementById('game-container')
-const start_btn = document.getElementById('start-btn')
-const timeEl = document.getElementById('time')
-const scoreEl = document.getElementById('score')
-const message = document.getElementById('message')
-const Winmessage = document.getElementById('win-message')
-const LoseMessage = document.getElementById('loss-message')
-const won = document.getElementById('winning')
-let seconds = 0
-let score = 0
-let selected_insect = {}
+
 
 start_btn.addEventListener('click',() => {
     screens[0].classList.add('up')
@@ -72,14 +60,17 @@ function increaseTime() {
 
 }
 function WL(){
-if(score >= 60 && seconds < 30){
-    message2.classList.add('visible')
-    message2.classList.remove('visible')
-}
-if(score < 60 && seconds > 30){
-    message3.classList.add('visible')
-    message3.classList.remove('visible')
-}
+    if (score > 59 && seconds < 31)
+    {
+        Win.classList.add('visible')
+        message.classList.remove('visible')
+    }
+
+    if (seconds > 30 && score < 60)
+    {
+        Loss.classList.add('visible')
+        message.classList.remove('visible')
+    }
 }
 function increaseScore() {
     score++
