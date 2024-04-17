@@ -22,6 +22,8 @@ h1 {
     padding: 20px 30px;
     position: relative;
     margin: auto;
+    height: 350px;
+    width: 450px;
 }
 
 .figure-container {
@@ -35,3 +37,9 @@ h1 {
     display: none;
 }
 
+
+.wrong-letter-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
