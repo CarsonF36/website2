@@ -11,7 +11,7 @@ const word = ['application', 'programming', 'interface', 'wizard']
 let selectedIndex = Math.floor(word.length * Math.random())
 let selectedWord = word[selectedIndex]
 
-const correctLetters = []
+const correctLetters = ['w', 'i', 'z']
 const wrongLetters = []
 
 // Show Hidden Word
@@ -25,8 +25,9 @@ wordEl.innerHTML = `
         </span>
         `).join('')
     }
-
 `
+
+console.log(word.El.innerText)
 }
 
 displayWord()
