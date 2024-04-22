@@ -4,3 +4,8 @@ const playAgainBtn = document.getElementById('play-again')
 const popup = document.getElementById('popup-container')
 const motification = document.getElementById('notification-container')
 const finalMessage = document.getElementById('final-message')
+const figureParts = document.querySelectorAll('.figure-part')
+
+const word = ['application', 'programming', 'interface', 'wizard']
+
+let selectedIndex = Math.floor(word.length * Math.random())
