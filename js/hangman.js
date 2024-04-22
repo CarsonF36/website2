@@ -23,7 +23,8 @@ wordEl.innerHTML = `
         <span class="letter">
         ${correctLetters.includes(letter) ? letter : ''}
         </span>
-        `)}
+        `).join('')
+    }
 
 `
 }
