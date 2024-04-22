@@ -26,8 +26,8 @@ wordEl.innerHTML = `
         `).join('')
     }
 `
-
-console.log(word.El.innerText)
+const innerWord = wordEl.innerText.()
+console.log(wordEl.innerText.replace(/\n/g, ''))
 }
 
 displayWord()
