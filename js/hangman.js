@@ -2,7 +2,7 @@ const wordEl = document.getElementById('word')
 const wrongLettersEl = document.getElementById('wrong-letters')
 const playAgainBtn = document.getElementById('play-again')
 const popup = document.getElementById('popup-container')
-const notification = document.getElementById('notification-container')
+const notification = document.getElementById('notification-center')
 const finalMessage = document.getElementById('final-message')
 const figureParts = document.querySelectorAll('.figure-part')
 
@@ -14,61 +14,36 @@ let selectedWord = word[selectedIndex]
 const correctLetters = []
 const wrongLetters = []
 
+// Show Hidden Word
 function displayWord() {
     wordEl.innerHTML = `
-    ${selectedWord.split('').map(letter => `
-        <span class="letter">
+        ${selectedWord
+        .split('')
+        .map(letter => `
+        <span class="letters">
             ${correctLetters.includes(letter) ? letter : ''}
-        </span>
-    `).join('')}
-`
+        <span>
+        `).join('')
+        }
+    `
     const innerWord = wordEl.innerText.replace(/\n/g, '')
-    if(innerWord == selectedWord){
+
+    if (innerWord == selectedWord) {
         finalMessage.innerText = 'Congratulations! You won!'
-        popup.stly.display = 'flex'
+        popup.style.display = 'flex'
     }
 }
 
+// Update the wrong letters
+function updateWrongLetters() {
+    wrongLettersEl.innerHTML = `
+        ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
+        ${wrongLetters.map(letter => `<span>${letter}</span>`)}
 
-//update wrong letters
-function updateWrongLettersEl(){
-    wrongLettersEl.innerHTML = ` ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
+    `
 }
 
+// Show Notification
+function showNotification() {
 
-//show notification
-function showNotification(){
-    notification.classList.add('show')
-
-    setTimeout(() => {
-        notifciation.classList.remove('show')
-    }, 2000)
 }
-
-
-//keydown letter press
-window.addEventListener('keydown', e =>{
-if(e.keyCode >= 65 && e.keyCode <=90){
-    const letter = e.key
-
-    if(selectedWord.includes(letter)){
-        if(!correctLetters.includes(letter)){
-            correctLetters.push(letter)
-            displayWord()
-        } else{
-            showNotification()
-        }
-    } else{
-        if(!wrongLetters.include(letter)){
-            wrongLetters.push(letter)
-
-            updateWrongLettersEl()
-        } else {
-            showNotification()
-        }
-    }
-}
-})
-
-
-displayWord()
