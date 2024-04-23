@@ -32,7 +32,7 @@ function displayWord() {
 
 //update wrong letters
 function updateWrongLettersEl(){
-    console.log('Update Wrong')
+    wrongLettersEl.innerHTML = ` ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
 }
 
 
