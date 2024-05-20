@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleButton.addEventListener('click', function () {
         isColored = !isColored;
         if (isColored) {
-            body.style.backgroundColor = 'orange';
+            body.style.backgroundColor = 'lightblue';
         } else {
             body.style.backgroundColor = 'skyblue';
         }
