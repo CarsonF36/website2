@@ -8,6 +8,7 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    position: relative;
 }
 
 h1 {
@@ -65,8 +66,17 @@ canvas {
     border-radius: 5px;
 }
 
-restart-btn {
+#restart-btn {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+#index-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
 }
