@@ -3,7 +3,6 @@ close = document.getElementById('close-btn');
 rules = document.getElementById('rules');
 canvas = document.getElementById('canvas');
 ctx = canvas.getContext('2d');
-
 score = 0;
 BrickRowCount = 9;
 BrickColumnCount = 5;
